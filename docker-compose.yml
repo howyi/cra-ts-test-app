@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: ./docker/dev
+    command: amplify
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
