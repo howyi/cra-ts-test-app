@@ -1,9 +1,7 @@
 version: '3'
 services:
-  web:
-    build: ./docker/dev
-    command: ls
+  ci:
+    build: docker
+    command: ./docker/ci.sh
     volumes:
       - .:/app
-    ports:
-      - "3000:3000"
