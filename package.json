@@ -50,15 +50,10 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.{ts,tsx}": [
-        "tsc --noEmit",
-        "yarn run lint:fix",
-        "git add"
-      ]
-    },
-    "ignore": [
-      "build/**/*"
+    "*.{ts,tsx}": [
+      "tsc --noEmit",
+      "yarn run lint:fix",
+      "git add"
     ]
   }
 }
