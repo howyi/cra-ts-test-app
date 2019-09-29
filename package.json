@@ -52,7 +52,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "tsc --noEmit",
-      "yarn run lint:fix",
+      "lint:fix",
       "git add"
     ]
   }
