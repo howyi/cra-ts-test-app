@@ -16,10 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'"
   },
   "browserslist": {
     "production": [
@@ -34,9 +33,13 @@
     ]
   },
   "devDependencies": {
-    "@aws-amplify/cli": "^3.10.0"
+    "@aws-amplify/cli": "^3.10.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
   },
-  "engines":  {
+  "engines": {
     "node": "~12"
   }
 }
