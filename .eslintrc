@@ -1,3 +1,16 @@
 {
-  "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended"]
+  "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended", "plugin:react/recommended"],
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
 }

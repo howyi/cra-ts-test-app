@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
-    "lint:type": "tsc -p . --noEmit #"
+    "lint:type": "tsc -p tsconfig.json --noEmit"
   },
   "browserslist": {
     "production": [
@@ -47,12 +47,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn run tsc -p tsconfig.json --noEmit && lint-staged"
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "lint:fix",
+    "**/*.ts?(x)": [
+      "yarn run lint:fix",
       "git add"
     ]
   }
